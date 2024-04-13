@@ -162,7 +162,7 @@ fun LineChart(modifier: Modifier, lineChartData: LineChartData) {
                     xOffset = xAxisData.axisStepSize.toPx() * xZoom
                     val xLeft = columnWidth // To add extra space if needed
                     val pointsData = getMappingPointsToGraph(
-                        line.dataPoints, xMin, xOffset, xLeft, scrollOffset, yBottom, yMin, yOffset
+                        line.dataPoints, xMin, xOffset, xLeft, scrollOffset, yBottom, 0.dp, yOffset
                     )
                     val (cubicPoints1, cubicPoints2) = getCubicPoints(pointsData)
                     val tapPointLocks = mutableMapOf<Int, Pair<Point, Offset>>()
